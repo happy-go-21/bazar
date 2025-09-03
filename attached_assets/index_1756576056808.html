@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خانه | بازار افغان</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header dir="rtl">
+  <div class="topbar container">
+    <div class="brand">
+      <img src="assets/images/logo.png" alt="Afghan Bazaar Logo">
+      <h1>بازار افغان</h1>
+    </div>
+    <div class="searchbar">
+      <input id="search" type="text" placeholder="جستجوی کالا...">
+      <button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">بالا</button>
+    </div>
+  </div>
+  <nav>
+    <div class="navbar container">
+      <a href="index.html">خانه</a>
+      <a href="categories.html">دسته‌بندی‌ها</a>
+      <a href="about.html">درباره ما</a>
+      <a href="contact.html">تماس</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="assets/images/hero.jpg" alt="Afghan Bazaar">
+  <div class="overlay">
+    <div class="hero-text container">
+      <h2>بازار افغان — خرید و فروش امن و آسان</h2>
+      <p>الکترونیک، ابزار، بازی و ده‌ها دسته دیگر</p>
+    </div>
+  </div>
+</section>
+<main class="container" style="margin-top:16px">
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0">
+    <button class="btn filter-btn active" data-cat="all" onclick="filterCategory('all')">همه</button>
+    <button class="btn filter-btn" data-cat="electronics" onclick="filterCategory('electronics')">الکترونیک</button>
+    <button class="btn filter-btn" data-cat="tools" onclick="filterCategory('tools')">ابزار</button>
+    <button class="btn filter-btn" data-cat="games" onclick="filterCategory('games')">بازی</button>
+  </div>
+  <section class="grid">
+    <article class="card" data-cat="electronics">
+      <img src="assets/images/electronics.jpg" alt="الکترونیک">
+      <div class="content">
+        <span class="badge">جدید</span>
+        <h3>گوشی سامسونگ A54</h3>
+        <p class="price">۲۰,۰۰۰ افغانی</p>
+        <a class="btn" href="categories.html#electronics">مشاهده</a>
+      </div>
+    </article>
+    <article class="card" data-cat="tools">
+      <img src="assets/images/tools.jpg" alt="ابزار">
+      <div class="content">
+        <span class="badge">فروش ویژه</span>
+        <h3>دریل برقی صنعتی</h3>
+        <p class="price">۵,۰۰۰ افغانی</p>
+        <a class="btn" href="categories.html#tools">مشاهده</a>
+      </div>
+    </article>
+    <article class="card" data-cat="games">
+      <img src="assets/images/games.jpg" alt="بازی">
+      <div class="content">
+        <span class="badge">محبوب</span>
+        <h3>پلی‌استیشن ۵</h3>
+        <p class="price">۴۵,۰۰۰ افغانی</p>
+        <a class="btn" href="categories.html#games">مشاهده</a>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer dir="rtl">
+  <div class="footer-inner container">
+    <div>© 2025 Afghan Bazaar — همه حقوق محفوظ است</div>
+    <div class="cred">Developed by <strong>Merwis Rahimi</strong></div>
+  </div>
+</footer>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

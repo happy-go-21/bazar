@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دسته‌بندی‌ها | بازار افغان</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header dir="rtl">
+  <div class="topbar container">
+    <div class="brand">
+      <img src="assets/images/logo.png" alt="Afghan Bazaar Logo">
+      <h1>بازار افغان</h1>
+    </div>
+    <div class="searchbar">
+      <input id="search" type="text" placeholder="جستجوی کالا...">
+      <button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">بالا</button>
+    </div>
+  </div>
+  <nav>
+    <div class="navbar container">
+      <a href="index.html">خانه</a>
+      <a href="categories.html">دسته‌بندی‌ها</a>
+      <a href="about.html">درباره ما</a>
+      <a href="contact.html">تماس</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container" style="margin-top:20px">
+  <h2 id="electronics">الکترونیک</h2>
+  <section class="grid">
+    <article class="card" data-cat="electronics">
+      <img src="assets/images/electronics.jpg" alt="الکترونیک">
+      <div class="content">
+        <h3>لپ‌تاپ لنوو</h3>
+        <p class="price">۳۲,۰۰۰ افغانی</p>
+        <button class="btn" onclick="alert('افزوده شد (دمو)')">افزودن به علاقه‌مندی</button>
+      </div>
+    </article>
+  </section>
+  <h2 id="tools" style="margin-top:24px">ابزار</h2>
+  <section class="grid">
+    <article class="card" data-cat="tools">
+      <img src="assets/images/tools.jpg" alt="ابزار">
+      <div class="content">
+        <h3>فرز انگشتی</h3>
+        <p class="price">۳,۲۰۰ افغانی</p>
+        <button class="btn" onclick="alert('افزوده شد (دمو)')">افزودن به علاقه‌مندی</button>
+      </div>
+    </article>
+  </section>
+  <h2 id="games" style="margin-top:24px">بازی و سرگرمی</h2>
+  <section class="grid">
+    <article class="card" data-cat="games">
+      <img src="assets/images/games.jpg" alt="بازی">
+      <div class="content">
+        <h3>دسته بازی وایرلس</h3>
+        <p class="price">۲,۴۰۰ افغانی</p>
+        <button class="btn" onclick="alert('افزوده شد (دمو)')">افزودن به علاقه‌مندی</button>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer dir="rtl">
+  <div class="footer-inner container">
+    <div>© 2025 Afghan Bazaar — همه حقوق محفوظ است</div>
+    <div class="cred">Developed by <strong>Merwis Rahimi</strong></div>
+  </div>
+</footer>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
