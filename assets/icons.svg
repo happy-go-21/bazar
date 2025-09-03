@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <!-- Afghanistan Map Icon -->
+  <symbol id="icon-afghanistan" viewBox="0 0 100 100">
+    <path d="M20 30 L25 20 L35 25 L50 15 L65 25 L80 20 L85 35 L75 50 L80 65 L70 75 L55 80 L40 75 L25 70 L15 60 L20 45 Z" 
+          fill="currentColor" stroke="currentColor" stroke-width="2"/>
+    <circle cx="45" cy="50" r="3" fill="currentColor"/>
+  </symbol>
+
+  <!-- Traditional Bazaar Icon -->
+  <symbol id="icon-bazaar" viewBox="0 0 100 100">
+    <rect x="10" y="40" width="80" height="40" fill="currentColor" opacity="0.3"/>
+    <path d="M10 40 L20 20 L80 20 L90 40 Z" fill="currentColor"/>
+    <rect x="25" y="50" width="15" height="25" fill="currentColor" opacity="0.7"/>
+    <rect x="60" y="50" width="15" height="25" fill="currentColor" opacity="0.7"/>
+    <circle cx="50" cy="30" r="5" fill="currentColor"/>
+  </symbol>
+
+  <!-- Afghan Currency Icon -->
+  <symbol id="icon-afghani" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="3"/>
+    <text x="50" y="60" text-anchor="middle" font-family="Arial" font-size="24" fill="currentColor">؋</text>
+  </symbol>
+
+  <!-- Traditional Carpet Icon -->
+  <symbol id="icon-carpet" viewBox="0 0 100 100">
+    <rect x="15" y="25" width="70" height="50" fill="currentColor" opacity="0.3"/>
+    <path d="M15 25 L20 20 L80 20 L85 25 L85 75 L80 80 L20 80 L15 75 Z" fill="currentColor"/>
+    <rect x="25" y="35" width="10" height="10" fill="currentColor" opacity="0.7"/>
+    <rect x="40" y="35" width="10" height="10" fill="currentColor" opacity="0.7"/>
+    <rect x="55" y="35" width="10" height="10" fill="currentColor" opacity="0.7"/>
+    <rect x="25" y="55" width="10" height="10" fill="currentColor" opacity="0.7"/>
+    <rect x="40" y="55" width="10" height="10" fill="currentColor" opacity="0.7"/>
+    <rect x="55" y="55" width="10" height="10" fill="currentColor" opacity="0.7"/>
+  </symbol>
+
+  <!-- Kebab Icon -->
+  <symbol id="icon-kebab" viewBox="0 0 100 100">
+    <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="4"/>
+    <circle cx="25" cy="50" r="4" fill="currentColor"/>
+    <circle cx="35" cy="45" r="3" fill="currentColor"/>
+    <circle cx="45" cy="55" r="3" fill="currentColor"/>
+    <circle cx="55" cy="45" r="3" fill="currentColor"/>
+    <circle cx="65" cy="55" r="3" fill="currentColor"/>
+    <circle cx="75" cy="50" r="4" fill="currentColor"/>
+  </symbol>
+
+  <!-- Tea Glass Icon -->
+  <symbol id="icon-tea" viewBox="0 0 100 100">
+    <path d="M25 35 L25 70 Q25 80 35 80 L65 80 Q75 80 75 70 L75 35 Z" fill="currentColor" opacity="0.3"/>
+    <path d="M20 35 Q20 25 30 25 L70 25 Q80 25 80 35" fill="none" stroke="currentColor" stroke-width="2"/>
+    <rect x="25" y="35" width="50" height="35" fill="currentColor" opacity="0.5"/>
+    <path d="M75 45 Q85 45 85 55 Q85 65 75 65" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+
+  <!-- Mosque Icon -->
+  <symbol id="icon-mosque" viewBox="0 0 100 100">
+    <rect x="20" y="50" width="60" height="35" fill="currentColor" opacity="0.3"/>
+    <path d="M20 50 L50 25 L80 50 Z" fill="currentColor"/>
+    <rect x="45" y="15" width="10" height="25" fill="currentColor"/>
+    <circle cx="50" cy="15" r="3" fill="currentColor"/>
+    <rect x="25" y="55" width="8" height="20" fill="currentColor" opacity="0.7"/>
+    <rect x="67" y="55" width="8" height="20" fill="currentColor" opacity="0.7"/>
+  </symbol>
+
+  <!-- Traditional Wheel Icon -->
+  <symbol id="icon-wheel" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="3"/>
+    <circle cx="50" cy="50" r="5" fill="currentColor"/>
+    <line x1="50" y1="20" x2="50" y2="35" stroke="currentColor" stroke-width="2"/>
+    <line x1="50" y1="65" x2="50" y2="80" stroke="currentColor" stroke-width="2"/>
+    <line x1="20" y1="50" x2="35" y2="50" stroke="currentColor" stroke-width="2"/>
+    <line x1="65" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="2"/>
+    <line x1="64.14" y1="35.86" x2="74.14" y2="25.86" stroke="currentColor" stroke-width="2"/>
+    <line x1="25.86" y1="74.14" x2="35.86" y2="64.14" stroke="currentColor" stroke-width="2"/>
+    <line x1="35.86" y1="35.86" x2="25.86" y2="25.86" stroke="currentColor" stroke-width="2"/>
+    <line x1="74.14" y1="74.14" x2="64.14" y2="64.14" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+
+  <!-- Pomegranate Icon -->
+  <symbol id="icon-pomegranate" viewBox="0 0 100 100">
+    <circle cx="50" cy="55" r="25" fill="currentColor" opacity="0.3"/>
+    <path d="M40 30 Q50 20 60 30 Q65 25 65 35 Q55 25 45 35 Q40 25 40 30" fill="currentColor"/>
+    <circle cx="45" cy="50" r="3" fill="currentColor" opacity="0.8"/>
+    <circle cx="55" cy="45" r="3" fill="currentColor" opacity="0.8"/>
+    <circle cx="50" cy="60" r="3" fill="currentColor" opacity="0.8"/>
+    <circle cx="42" cy="65" r="2" fill="currentColor" opacity="0.8"/>
+    <circle cx="58" cy="65" r="2" fill="currentColor" opacity="0.8"/>
+  </symbol>
+
+  <!-- Saffron Icon -->
+  <symbol id="icon-saffron" viewBox="0 0 100 100">
+    <path d="M30 70 Q35 60 40 65 Q45 55 50 60 Q55 50 60 55 Q65 45 70 50" 
+          fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <path d="M25 75 Q30 65 35 70 Q40 60 45 65 Q50 55 55 60 Q60 50 65 55" 
+          fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <path d="M35 80 Q40 70 45 75 Q50 65 55 70 Q60 60 65 65 Q70 55 75 60" 
+          fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- Naan Bread Icon -->
+  <symbol id="icon-naan" viewBox="0 0 100 100">
+    <ellipse cx="50" cy="50" rx="25" ry="35" fill="currentColor" opacity="0.3"/>
+    <ellipse cx="50" cy="50" rx="20" ry="30" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="45" cy="40" r="2" fill="currentColor"/>
+    <circle cx="55" cy="45" r="2" fill="currentColor"/>
+    <circle cx="48" cy="55" r="2" fill="currentColor"/>
+    <circle cx="52" cy="65" r="2" fill="currentColor"/>
+  </symbol>
+
+  <!-- Traditional Scale Icon -->
+  <symbol id="icon-scale" viewBox="0 0 100 100">
+    <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" stroke-width="3"/>
+    <line x1="20" y1="40" x2="80" y2="40" stroke="currentColor" stroke-width="2"/>
+    <circle cx="50" cy="40" r="3" fill="currentColor"/>
+    <path d="M15 40 L25 50 L25 45 Z" fill="currentColor"/>
+    <path d="M85 40 L75 50 L75 45 Z" fill="currentColor"/>
+    <line x1="15" y1="45" x2="25" y2="45" stroke="currentColor" stroke-width="1"/>
+    <line x1="75" y1="45" x2="85" y2="45" stroke="currentColor" stroke-width="1"/>
+  </symbol>
+
+  <!-- Horseshoe Icon -->
+  <symbol id="icon-horseshoe" viewBox="0 0 100 100">
+    <path d="M25 30 Q25 50 35 70 Q40 75 45 70 Q50 65 50 60 Q50 65 55 70 Q60 75 65 70 Q75 50 75 30 Q75 20 65 20 Q55 25 50 30 Q45 25 35 20 Q25 20 25 30" 
+          fill="none" stroke="currentColor" stroke-width="4"/>
+    <circle cx="35" cy="35" r="2" fill="currentColor"/>
+    <circle cx="65" cy="35" r="2" fill="currentColor"/>
+    <circle cx="30" cy="50" r="2" fill="currentColor"/>
+    <circle cx="70" cy="50" r="2" fill="currentColor"/>
+  </symbol>
+
+  <!-- Traditional Pot Icon -->
+  <symbol id="icon-pot" viewBox="0 0 100 100">
+    <path d="M25 45 Q25 35 35 35 L65 35 Q75 35 75 45 L75 70 Q75 80 65 80 L35 80 Q25 80 25 70 Z" fill="currentColor" opacity="0.3"/>
+    <ellipse cx="50" cy="35" rx="20" ry="5" fill="currentColor"/>
+    <rect x="45" y="25" width="10" height="15" fill="currentColor"/>
+    <circle cx="50" cy="25" r="3" fill="currentColor"/>
+    <path d="M75 50 Q85 50 85 60 Q85 70 75 70" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+
+  <!-- Cotton Icon -->
+  <symbol id="icon-cotton" viewBox="0 0 100 100">
+    <circle cx="40" cy="40" r="12" fill="currentColor" opacity="0.4"/>
+    <circle cx="60" cy="40" r="12" fill="currentColor" opacity="0.4"/>
+    <circle cx="50" cy="60" r="12" fill="currentColor" opacity="0.4"/>
+    <circle cx="35" cy="60" r="8" fill="currentColor" opacity="0.3"/>
+    <circle cx="65" cy="60" r="8" fill="currentColor" opacity="0.3"/>
+    <line x1="50" y1="70" x2="50" y2="85" stroke="currentColor" stroke-width="3"/>
+  </symbol>
+</svg>
