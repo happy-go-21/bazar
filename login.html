@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Afghan Bazaar</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+  <!-- Language Toggle -->
+  <div class="language-toggle">
+    <button id="langToggle" class="lang-btn">
+      <i class="fas fa-globe"></i>
+      <span class="lang-text">EN</span>
+    </button>
+  </div>
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <button class="theme-btn" id="themeToggle">
+      <i class="fas fa-sun" id="themeIcon"></i>
+    </button>
+  </div>
+
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <h1 class="logo">بازار افغان</h1>
+        <h2 data-i18n="login">Login</h2>
+      </div>
+      
+      <form id="loginForm" class="login-form">
+        <div class="input-group">
+          <label for="name" data-i18n="fullName">Full Name</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="input-group">
+          <label for="phone" data-i18n="phoneNumber">Phone Number</label>
+          <input type="tel" id="phone" required placeholder="+93 XXX XXX XXX">
+        </div>
+
+        <button type="submit" class="login-btn" data-i18n="login">Login</button>
+      </form>
+
+      <div id="twoFA" class="two-fa-container" style="display:none;">
+        <h3 data-i18n="enterCode">Enter 2FA Code</h3>
+        <div class="input-group">
+          <input type="text" id="code" placeholder="123456" maxlength="6">
+        </div>
+        <button onclick="verifyCode()" class="verify-btn" data-i18n="verify">Verify</button>
+      </div>
+
+      <div class="guest-access">
+        <p><a href="index.html" data-i18n="guestAccess">Continue as Guest</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Load languages (without Pashto)
+    let currentLang = localStorage.getItem("lang") || "en";
+    
+    fetch("languages.json")
+      .then(res => res.json())
+      .then(langs => {
+        applyLanguage(langs[currentLang]);
+        
+        // Update language toggle
+        document.getElementById('langToggle').addEventListener('click', () => {
+          currentLang = currentLang === 'en' ? 'fa' : 'en';
+          localStorage.setItem('lang', currentLang);
+          applyLanguage(langs[currentLang]);
+          updateLangToggle();
+        });
+        
+        updateLangToggle();
+      });
+
+    function applyLanguage(dict) {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        let key = el.getAttribute("data-i18n");
+        el.textContent = dict[key] || el.textContent;
+      });
+      
+      // Update direction for RTL languages
+      if (currentLang === 'fa') {
+        document.body.dir = 'rtl';
+        document.body.classList.add('rtl');
+      } else {
+        document.body.dir = 'ltr';
+        document.body.classList.remove('rtl');
+      }
+    }
+    
+    function updateLangToggle() {
+      const langToggle = document.getElementById('langToggle');
+      const langText = langToggle.querySelector('.lang-text');
+      langText.textContent = currentLang === 'en' ? 'فارسی' : 'EN';
+    }
+
+    // Login system
+    document.getElementById("loginForm")?.addEventListener("submit", e => {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      
+      if (name && phone) {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("twoFA").style.display = "block";
+        
+        // Store user data temporarily
+        sessionStorage.setItem('tempUserName', name);
+        sessionStorage.setItem('tempUserPhone', phone);
+        
+        alert(currentLang === 'fa' ? 'کد تایید به شماره شما ارسال شد' : 'A 2FA code was sent to your phone (simulation).');
+      }
+    });
+
+    // Theme toggle functionality
+    const themeManager = {
+        init() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            this.applyTheme(savedTheme);
+            
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => this.toggleTheme());
+            }
+        },
+        
+        toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            this.applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+        },
+        
+        applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const themeIcon = document.getElementById('themeIcon');
+            if (themeIcon) {
+                themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            }
+        }
+    };
+    
+    // Initialize theme manager
+    themeManager.init();
+
+    function verifyCode() {
+      let code = document.getElementById("code").value;
+      if (code === "123456" || code === "000000") {
+        const userName = sessionStorage.getItem('tempUserName');
+        const userPhone = sessionStorage.getItem('tempUserPhone');
+        
+        // Store user session
+        localStorage.setItem('userLoggedIn', 'true');
+        localStorage.setItem('userName', userName);
+        localStorage.setItem('userPhone', userPhone);
+        
+        alert(currentLang === 'fa' ? 'ورود موفقیت‌آمیز!' : 'Login successful!');
+        window.location.href = "index.html";
+      } else {
+        alert(currentLang === 'fa' ? 'کد نامعتبر' : 'Invalid code.');
+      }
+    }
+  </script>
+</body>
+</html>

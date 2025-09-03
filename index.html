@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازار افغانستان - خرید و فروش آنلاین</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1><i class="fas fa-store"></i> بازار افغانستان</h1>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">خانه</a></li>
+                        <li><a href="pages/categories.html" class="nav-link">دسته‌بندی‌ها</a></li>
+                        <li><a href="pages/about.html" class="nav-link">درباره ما</a></li>
+                        <li><a href="pages/contact.html" class="nav-link">تماس</a></li>
+                        <li><a href="login.html" class="nav-link">ورود</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Language Toggle -->
+                <div class="lang-toggle">
+                    <button class="btn-neon" id="langToggle">
+                        <span class="lang-text">EN</span>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title" id="heroTitle">بزرگترین بازار آنلاین افغانستان</h2>
+                <p class="hero-subtitle" id="heroSubtitle">خرید و فروش آسان و امن در سراسر کشور</p>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <form class="search-form">
+                        <div class="search-input-group">
+                            <input type="text" id="searchInput" placeholder="جستجوی محصولات..." class="search-input">
+                            <button type="submit" class="btn-neon search-btn">
+                                <i class="fas fa-search"></i>
+                                جستجو
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Province Selector -->
+                <div class="province-selector">
+                    <label for="provinceSelect">انتخاب ولایت:</label>
+                    <select id="provinceSelect" class="province-select">
+                        <option value="">همه ولایات</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h3 class="section-title">دسته‌بندی‌های محصولات</h3>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters">
+        <div class="container">
+            <div class="filters-content">
+                <h4>فیلترها</h4>
+                <div class="filter-group">
+                    <label>محدوده قیمت:</label>
+                    <div class="price-range">
+                        <input type="number" id="minPrice" placeholder="حداقل قیمت" class="filter-input">
+                        <input type="number" id="maxPrice" placeholder="حداکثر قیمت" class="filter-input">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>مرتب‌سازی:</label>
+                    <select id="sortSelect" class="filter-select">
+                        <option value="newest">جدیدترین</option>
+                        <option value="price-low">قیمت: کم به زیاد</option>
+                        <option value="price-high">قیمت: زیاد به کم</option>
+                        <option value="popular">محبوب‌ترین</option>
+                    </select>
+                </div>
+                <button class="btn-neon" id="applyFilters">اعمال فیلتر</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h3 class="section-title">محصولات</h3>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>در حال بارگذاری محصولات...</p>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+            <div class="load-more-container">
+                <button class="btn-neon" id="loadMore">نمایش محصولات بیشتر</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>بازار افغانستان</h4>
+                    <p>بزرگترین پلتفرم خرید و فروش آنلاین در افغانستان</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>لینک‌های مفید</h5>
+                    <ul>
+                        <li><a href="#">قوانین و مقررات</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">پشتیبانی</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>تماس با ما</h5>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +93 700 123 456</li>
+                        <li><i class="fas fa-envelope"></i> info@bazarafghanistan.af</li>
+                        <li><i class="fas fa-map-marker-alt"></i> کابل، افغانستان</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 بازار افغانستان. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button class="theme-btn" id="themeToggle">
+            <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
