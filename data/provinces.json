@@ -1,0 +1,383 @@
+[
+  {
+    "id": "kabul",
+    "name": {
+      "fa": "کابل",
+      "ps": "کابل",
+      "en": "Kabul"
+    },
+    "coordinates": {
+      "lat": 34.5553,
+      "lng": 69.2075
+    }
+  },
+  {
+    "id": "herat",
+    "name": {
+      "fa": "هرات",
+      "ps": "هرات",
+      "en": "Herat"
+    },
+    "coordinates": {
+      "lat": 34.3467,
+      "lng": 62.1997
+    }
+  },
+  {
+    "id": "balkh",
+    "name": {
+      "fa": "بلخ",
+      "ps": "بلخ",
+      "en": "Balkh"
+    },
+    "coordinates": {
+      "lat": 36.7581,
+      "lng": 67.1120
+    }
+  },
+  {
+    "id": "kandahar",
+    "name": {
+      "fa": "قندهار",
+      "ps": "کندهار",
+      "en": "Kandahar"
+    },
+    "coordinates": {
+      "lat": 31.6180,
+      "lng": 65.7372
+    }
+  },
+  {
+    "id": "nangarhar",
+    "name": {
+      "fa": "ننگرهار",
+      "ps": "ننګرهار",
+      "en": "Nangarhar"
+    },
+    "coordinates": {
+      "lat": 34.4189,
+      "lng": 70.4489
+    }
+  },
+  {
+    "id": "ghazni",
+    "name": {
+      "fa": "غزنی",
+      "ps": "غزني",
+      "en": "Ghazni"
+    },
+    "coordinates": {
+      "lat": 33.5539,
+      "lng": 68.4173
+    }
+  },
+  {
+    "id": "bamyan",
+    "name": {
+      "fa": "بامیان",
+      "ps": "بامیان",
+      "en": "Bamyan"
+    },
+    "coordinates": {
+      "lat": 34.8219,
+      "lng": 67.8267
+    }
+  },
+  {
+    "id": "kunduz",
+    "name": {
+      "fa": "کندز",
+      "ps": "کندز"
+    },
+    "coordinates": {
+      "lat": 36.7289,
+      "lng": 68.8578
+    }
+  },
+  {
+    "id": "helmand",
+    "name": {
+      "fa": "هلمند",
+      "ps": "هیلمند"
+    },
+    "coordinates": {
+      "lat": 31.3157,
+      "lng": 64.1600
+    }
+  },
+  {
+    "id": "badakhshan",
+    "name": {
+      "fa": "بدخشان",
+      "ps": "بدخشان"
+    },
+    "coordinates": {
+      "lat": 37.1344,
+      "lng": 70.8147
+    }
+  },
+  {
+    "id": "farah",
+    "name": {
+      "fa": "فراه",
+      "ps": "فراه"
+    },
+    "coordinates": {
+      "lat": 32.3744,
+      "lng": 62.1197
+    }
+  },
+  {
+    "id": "faryab",
+    "name": {
+      "fa": "فاریاب",
+      "ps": "فاریاب"
+    },
+    "coordinates": {
+      "lat": 35.9019,
+      "lng": 64.9061
+    }
+  },
+  {
+    "id": "jawzjan",
+    "name": {
+      "fa": "جوزجان",
+      "ps": "جوزجان"
+    },
+    "coordinates": {
+      "lat": 36.8978,
+      "lng": 65.6678
+    }
+  },
+  {
+    "id": "kapisa",
+    "name": {
+      "fa": "کاپیسا",
+      "ps": "کاپیسا"
+    },
+    "coordinates": {
+      "lat": 35.0178,
+      "lng": 69.6211
+    }
+  },
+  {
+    "id": "khost",
+    "name": {
+      "fa": "خوست",
+      "ps": "خوست"
+    },
+    "coordinates": {
+      "lat": 33.3378,
+      "lng": 69.9344
+    }
+  },
+  {
+    "id": "kunar",
+    "name": {
+      "fa": "کنر",
+      "ps": "کونړ"
+    },
+    "coordinates": {
+      "lat": 34.8467,
+      "lng": 71.0878
+    }
+  },
+  {
+    "id": "laghman",
+    "name": {
+      "fa": "لغمان",
+      "ps": "لغمان"
+    },
+    "coordinates": {
+      "lat": 34.6897,
+      "lng": 70.1411
+    }
+  },
+  {
+    "id": "logar",
+    "name": {
+      "fa": "لوگر",
+      "ps": "لوګر"
+    },
+    "coordinates": {
+      "lat": 34.0156,
+      "lng": 68.9578
+    }
+  },
+  {
+    "id": "nimroz",
+    "name": {
+      "fa": "نیمروز",
+      "ps": "نیمروز"
+    },
+    "coordinates": {
+      "lat": 31.0267,
+      "lng": 62.4497
+    }
+  },
+  {
+    "id": "nuristan",
+    "name": {
+      "fa": "نورستان",
+      "ps": "نورستان"
+    },
+    "coordinates": {
+      "lat": 35.3228,
+      "lng": 70.9078
+    }
+  },
+  {
+    "id": "paktia",
+    "name": {
+      "fa": "پکتیا",
+      "ps": "پکتیا"
+    },
+    "coordinates": {
+      "lat": 33.7069,
+      "lng": 69.3739
+    }
+  },
+  {
+    "id": "paktika",
+    "name": {
+      "fa": "پکتیکا",
+      "ps": "پکتیکا"
+    },
+    "coordinates": {
+      "lat": 32.2678,
+      "lng": 68.0878
+    }
+  },
+  {
+    "id": "panjshir",
+    "name": {
+      "fa": "پنجشیر",
+      "ps": "پنجشیر"
+    },
+    "coordinates": {
+      "lat": 35.3456,
+      "lng": 69.7289
+    }
+  },
+  {
+    "id": "parwan",
+    "name": {
+      "fa": "پروان",
+      "ps": "پروان"
+    },
+    "coordinates": {
+      "lat": 35.0578,
+      "lng": 69.1197
+    }
+  },
+  {
+    "id": "samangan",
+    "name": {
+      "fa": "سمنگان",
+      "ps": "سمنګان"
+    },
+    "coordinates": {
+      "lat": 36.3156,
+      "lng": 68.0578
+    }
+  },
+  {
+    "id": "sar-e-pul",
+    "name": {
+      "fa": "سرپل",
+      "ps": "سرپل"
+    },
+    "coordinates": {
+      "lat": 36.2156,
+      "lng": 65.9344
+    }
+  },
+  {
+    "id": "takhar",
+    "name": {
+      "fa": "تخار",
+      "ps": "تخار"
+    },
+    "coordinates": {
+      "lat": 36.7344,
+      "lng": 69.4789
+    }
+  },
+  {
+    "id": "urozgan",
+    "name": {
+      "fa": "ارزگان",
+      "ps": "ارزګان"
+    },
+    "coordinates": {
+      "lat": 32.9344,
+      "lng": 66.6289
+    }
+  },
+  {
+    "id": "wardak",
+    "name": {
+      "fa": "وردک",
+      "ps": "وردګ"
+    },
+    "coordinates": {
+      "lat": 34.3744,
+      "lng": 68.2578
+    }
+  },
+  {
+    "id": "zabul",
+    "name": {
+      "fa": "زابل",
+      "ps": "زابل"
+    },
+    "coordinates": {
+      "lat": 32.3289,
+      "lng": 67.0344
+    }
+  },
+  {
+    "id": "badghis",
+    "name": {
+      "fa": "بادغیس",
+      "ps": "بادغیس"
+    },
+    "coordinates": {
+      "lat": 35.1678,
+      "lng": 63.7689
+    }
+  },
+  {
+    "id": "ghor",
+    "name": {
+      "fa": "غور",
+      "ps": "غور"
+    },
+    "coordinates": {
+      "lat": 34.1056,
+      "lng": 64.9078
+    }
+  },
+  {
+    "id": "daikundi",
+    "name": {
+      "fa": "دایکندی",
+      "ps": "دایکندی"
+    },
+    "coordinates": {
+      "lat": 33.6678,
+      "lng": 66.0456
+    }
+  },
+  {
+    "id": "panjwayi",
+    "name": {
+      "fa": "پنجوایی",
+      "ps": "پنجوایی"
+    },
+    "coordinates": {
+      "lat": 31.5067,
+      "lng": 65.2578
+    }
+  }
+]

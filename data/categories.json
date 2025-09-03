@@ -1,0 +1,122 @@
+[
+  {
+    "id": "electronics",
+    "name": {
+      "fa": "الکترونیک",
+      "ps": "برقي توکي",
+      "en": "Electronics"
+    },
+    "icon": "fas fa-laptop",
+    "count": 847
+  },
+  {
+    "id": "vehicles",
+    "name": {
+      "fa": "وسایل نقلیه",
+      "ps": "د ترانسپورت وسایل",
+      "en": "Vehicles"
+    },
+    "icon": "fas fa-car",
+    "count": 523
+  },
+  {
+    "id": "home",
+    "name": {
+      "fa": "خانه و آشپزخانه",
+      "ps": "کور او پخلنځي",
+      "en": "Home & Kitchen"
+    },
+    "icon": "fas fa-home",
+    "count": 612
+  },
+  {
+    "id": "fashion",
+    "name": {
+      "fa": "پوشاک و مد",
+      "ps": "جامې او فیشن",
+      "en": "Fashion & Clothing"
+    },
+    "icon": "fas fa-tshirt",
+    "count": 389
+  },
+  {
+    "id": "furniture",
+    "name": {
+      "fa": "مبلمان",
+      "ps": "د کور سامان",
+      "en": "Furniture"
+    },
+    "icon": "fas fa-couch",
+    "count": 234
+  },
+  {
+    "id": "books",
+    "name": {
+      "fa": "کتاب و نشریات",
+      "ps": "کتابونه او خپرونې",
+      "en": "Books & Publications"
+    },
+    "icon": "fas fa-book",
+    "count": 156
+  },
+  {
+    "id": "sports",
+    "name": {
+      "fa": "ورزش و تفریح",
+      "ps": "سپورت او تفریح",
+      "en": "Sports & Recreation"
+    },
+    "icon": "fas fa-football-ball",
+    "count": 198
+  },
+  {
+    "id": "beauty",
+    "name": {
+      "fa": "زیبایی و بهداشت",
+      "ps": "ښکلا او روغتیا",
+      "en": "Beauty & Health"
+    },
+    "icon": "fas fa-heart",
+    "count": 267
+  },
+  {
+    "id": "jewelry",
+    "name": {
+      "fa": "جواهرات و ساعت",
+      "ps": "جواهرات او ساعتونه",
+      "en": "Jewelry & Watches"
+    },
+    "icon": "fas fa-gem",
+    "count": 143
+  },
+  {
+    "id": "tools",
+    "name": {
+      "fa": "ابزار و یراق",
+      "ps": "وسایل او آلات",
+      "en": "Tools & Hardware"
+    },
+    "icon": "fas fa-tools",
+    "count": 178
+  },
+  {
+    "id": "agriculture",
+    "name": {
+      "fa": "کشاورزی و دامداری",
+      "ps": "کرنه او څارویداري",
+      "en": "Agriculture & Livestock"
+    },
+    "icon": "fas fa-seedling",
+    "count": 245
+  },
+  {
+    "id": "toys",
+    "name": {
+      "fa": "اسباب بازی",
+      "ps": "د لوبو توکي",
+      "en": "Toys & Games"
+    },
+    "icon": "fas fa-puzzle-piece",
+    "count": 89
+  }
+]

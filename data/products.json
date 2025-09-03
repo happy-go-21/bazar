@@ -1,0 +1,334 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "fa": "گوشی هوشمند سامسونگ گلکسی A54",
+      "ps": "د سامسونګ ګلکسي A54 ګرځنده تلیفون",
+      "en": "Samsung Galaxy A54 Smartphone"
+    },
+    "description": {
+      "fa": "گوشی هوشمند سامسونگ با صفحه نمایش 6.4 اینچی و دوربین 50 مگاپیکسلی",
+      "ps": "د سامسونګ ګرځنده تلیفون د 6.4 انچه ښودنیز پرده او 50 میګاپکسل کیمره سره",
+      "en": "Samsung smartphone with 6.4-inch display and 50MP camera"
+    },
+    "price": 450000,
+    "categoryId": "electronics",
+    "location": {
+      "provinceId": "kabul",
+      "province": {
+        "fa": "کابل",
+        "ps": "کابل"
+      },
+      "city": {
+        "fa": "کابل شهر",
+        "ps": "د کابل ښار"
+      }
+    },
+    "seller": {
+      "name": "احمد علی",
+      "phone": "+93 700 123 456"
+    },
+    "icon": "fas fa-mobile-alt",
+    "isNew": true,
+    "isFeatured": false,
+    "createdAt": "2025-01-15",
+    "views": 1250
+  },
+  {
+    "id": 2,
+    "title": {
+      "fa": "لپ تاپ لنوو ThinkPad E15",
+      "ps": "د لینوو ThinkPad E15 لپ ټاپ"
+    },
+    "description": {
+      "fa": "لپ تاپ قدرتمند برای کار و تحصیل با پردازنده Intel Core i5",
+      "ps": "د کار او زده کړو لپاره قوي لپ ټاپ د Intel Core i5 پروسیسر سره"
+    },
+    "price": 850000,
+    "categoryId": "electronics",
+    "location": {
+      "provinceId": "herat",
+      "province": {
+        "fa": "هرات",
+        "ps": "هرات"
+      },
+      "city": {
+        "fa": "هرات شهر",
+        "ps": "د هرات ښار"
+      }
+    },
+    "seller": {
+      "name": "محمد حسن",
+      "phone": "+93 799 456 789"
+    },
+    "icon": "fas fa-laptop",
+    "isNew": false,
+    "isFeatured": true,
+    "createdAt": "2025-01-10",
+    "views": 890
+  },
+  {
+    "id": 3,
+    "title": {
+      "fa": "تلویزیون ال ای دی 55 اینچ سونی",
+      "ps": "د سوني 55 انچه LED تلویزیون"
+    },
+    "description": {
+      "fa": "تلویزیون هوشمند سونی با کیفیت 4K و اندروید TV",
+      "ps": "د سوني هوښیار تلویزیون د 4K کیفیت او اندروید TV سره"
+    },
+    "price": 1200000,
+    "categoryId": "electronics",
+    "location": {
+      "provinceId": "mazar",
+      "province": {
+        "fa": "بلخ",
+        "ps": "بلخ"
+      },
+      "city": {
+        "fa": "مزار شریف",
+        "ps": "مزار شریف"
+      }
+    },
+    "seller": {
+      "name": "فرید احمدی",
+      "phone": "+93 707 789 123"
+    },
+    "icon": "fas fa-tv",
+    "isNew": true,
+    "isFeatured": true,
+    "createdAt": "2025-01-12",
+    "views": 2100
+  },
+  {
+    "id": 4,
+    "title": {
+      "fa": "ماشین لباسشویی 8 کیلویی ال جی",
+      "ps": "د 8 کیلو ګرامه LG د جامو د مینځلو ماشین"
+    },
+    "description": {
+      "fa": "ماشین لباسشویی اتوماتیک با ظرفیت 8 کیلوگرم و 14 برنامه شستشو",
+      "ps": "د اتوماتیک د جامو د مینځلو ماشین د 8 کیلوګرام ظرفیت او 14 د مینځلو پروګرام سره"
+    },
+    "price": 680000,
+    "categoryId": "home",
+    "location": {
+      "provinceId": "kandahar",
+      "province": {
+        "fa": "قندهار",
+        "ps": "کندهار"
+      },
+      "city": {
+        "fa": "قندهار شهر",
+        "ps": "د کندهار ښار"
+      }
+    },
+    "seller": {
+      "name": "علی رضا",
+      "phone": "+93 700 654 321"
+    },
+    "icon": "fas fa-tshirt",
+    "isNew": false,
+    "isFeatured": false,
+    "createdAt": "2025-01-08",
+    "views": 450
+  },
+  {
+    "id": 5,
+    "title": {
+      "fa": "یخچال فریزر دوقلو سامسونگ",
+      "ps": "د سامسونګ دوه برخیز یخچال"
+    },
+    "description": {
+      "fa": "یخچال فریزر 18 فوتی با تکنولوژی Twin Cooling Plus",
+      "ps": "د 18 فوټه یخچال د Twin Cooling Plus ټکنالوژۍ سره"
+    },
+    "price": 950000,
+    "categoryId": "home",
+    "location": {
+      "provinceId": "nangarhar",
+      "province": {
+        "fa": "ننگرهار",
+        "ps": "ننګرهار"
+      },
+      "city": {
+        "fa": "جلال آباد",
+        "ps": "جلال آباد"
+      }
+    },
+    "seller": {
+      "name": "محمد عمر",
+      "phone": "+93 799 111 222"
+    },
+    "icon": "fas fa-snowflake",
+    "isNew": true,
+    "isFeatured": false,
+    "createdAt": "2025-01-14",
+    "views": 780
+  },
+  {
+    "id": 6,
+    "title": {
+      "fa": "موتورسیکلت هوندا 125cc",
+      "ps": "د هونډا 125cc موټورسایکل"
+    },
+    "description": {
+      "fa": "موتورسیکلت هوندا مدل جدید با مصرف سوخت کم",
+      "ps": "د هونډا نوي ماډل موټورسایکل د لږ تیلو مصرف سره"
+    },
+    "price": 320000,
+    "categoryId": "vehicles",
+    "location": {
+      "provinceId": "balkh",
+      "province": {
+        "fa": "بلخ",
+        "ps": "بلخ"
+      },
+      "city": {
+        "fa": "مزار شریف",
+        "ps": "مزار شریف"
+      }
+    },
+    "seller": {
+      "name": "نصرت الله",
+      "phone": "+93 707 333 444"
+    },
+    "icon": "fas fa-motorcycle",
+    "isNew": false,
+    "isFeatured": true,
+    "createdAt": "2025-01-09",
+    "views": 1650
+  },
+  {
+    "id": 7,
+    "title": {
+      "fa": "کتاب آموزش زبان انگلیسی",
+      "ps": "د انګلیسي ژبې د زده کړې کتاب"
+    },
+    "description": {
+      "fa": "مجموعه کامل آموزش زبان انگلیسی از مبتدی تا پیشرفته",
+      "ps": "د انګلیسي ژبې د زده کړې بشپړه ټولګه د پیل څخه تر پرمختللي پورې"
+    },
+    "price": 25000,
+    "categoryId": "books",
+    "location": {
+      "provinceId": "kabul",
+      "province": {
+        "fa": "کابل",
+        "ps": "کابل"
+      },
+      "city": {
+        "fa": "کابل شهر",
+        "ps": "د کابل ښار"
+      }
+    },
+    "seller": {
+      "name": "فاطمه احمدی",
+      "phone": "+93 700 555 666"
+    },
+    "icon": "fas fa-book",
+    "isNew": true,
+    "isFeatured": false,
+    "createdAt": "2025-01-13",
+    "views": 320
+  },
+  {
+    "id": 8,
+    "title": {
+      "fa": "لباس مردانه کت و شلوار",
+      "ps": "د سړو د جامو کت او پتلون"
+    },
+    "description": {
+      "fa": "کت و شلوار مردانه رسمی با کیفیت عالی برای مراسم",
+      "ps": "د سړو رسمي کت او پتلون د غوره کیفیت سره د مراسمو لپاره"
+    },
+    "price": 85000,
+    "categoryId": "fashion",
+    "location": {
+      "provinceId": "herat",
+      "province": {
+        "fa": "هرات",
+        "ps": "هرات"
+      },
+      "city": {
+        "fa": "هرات شهر",
+        "ps": "د هرات ښار"
+      }
+    },
+    "seller": {
+      "name": "عبدالرحمن",
+      "phone": "+93 799 777 888"
+    },
+    "icon": "fas fa-user-tie",
+    "isNew": false,
+    "isFeatured": false,
+    "createdAt": "2025-01-07",
+    "views": 290
+  },
+  {
+    "id": 9,
+    "title": {
+      "fa": "میز و صندلی ناهارخوری چوبی",
+      "ps": "د لرګینه د ډوډۍ خوړلو میز او څوکۍ"
+    },
+    "description": {
+      "fa": "میز و 6 صندلی ناهارخوری از چوب بلوط با طراحی کلاسیک",
+      "ps": "د 6 څوکیو سره د ډوډۍ خوړلو میز د بلوط لرګي څخه د کلاسیک ډیزاین سره"
+    },
+    "price": 420000,
+    "categoryId": "furniture",
+    "location": {
+      "provinceId": "ghazni",
+      "province": {
+        "fa": "غزنی",
+        "ps": "غزني"
+      },
+      "city": {
+        "fa": "غزنی شهر",
+        "ps": "د غزني ښار"
+      }
+    },
+    "seller": {
+      "name": "حبیب الله",
+      "phone": "+93 707 999 000"
+    },
+    "icon": "fas fa-chair",
+    "isNew": true,
+    "isFeatured": true,
+    "createdAt": "2025-01-11",
+    "views": 640
+  },
+  {
+    "id": 10,
+    "title": {
+      "fa": "دوچرخه کوهستان 21 دنده",
+      "ps": "د غرونو 21 ګیر بایسکل"
+    },
+    "description": {
+      "fa": "دوچرخه کوهستان با 21 دنده و تعلیق جلو برای رانندگی آفرود",
+      "ps": "د غرونو بایسکل د 21 ګیر او مخکینۍ سسپنشن سره د سخت سړکونو لپاره"
+    },
+    "price": 180000,
+    "categoryId": "sports",
+    "location": {
+      "provinceId": "bamyan",
+      "province": {
+        "fa": "بامیان",
+        "ps": "بامیان"
+      },
+      "city": {
+        "fa": "بامیان شهر",
+        "ps": "د بامیان ښار"
+      }
+    },
+    "seller": {
+      "name": "رحیم داد",
+      "phone": "+93 700 123 789"
+    },
+    "icon": "fas fa-bicycle",
+    "isNew": false,
+    "isFeatured": false,
+    "createdAt": "2025-01-06",
+    "views": 410
+  }
+]
