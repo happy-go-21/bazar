@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما - بازار افغانستان</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1><i class="fas fa-store"></i> بازار افغانستان</h1>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">خانه</a></li>
+                        <li><a href="categories.html" class="nav-link">دسته‌بندی‌ها</a></li>
+                        <li><a href="about.html" class="nav-link active">درباره ما</a></li>
+                        <li><a href="contact.html" class="nav-link">تماس</a></li>
+                        <li><a href="../login.html" class="nav-link">ورود</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Language Toggle -->
+                <div class="lang-toggle">
+                    <button class="btn-neon" id="langToggle">
+                        <span class="lang-text">EN</span>
+                    </button>
+                </div>
+                
+                <!-- Theme Toggle -->
+                <div class="theme-toggle">
+                    <button class="theme-btn" id="themeToggle">
+                        <i class="fas fa-sun" id="themeIcon"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-content fade-in-up">
+                <h2 class="section-title" id="aboutTitle">درباره بازار افغان</h2>
+                <div class="about-description">
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <img src="../assets/images/developer.jpg" alt="Developer" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-primary);">
+                        </div>
+                        <div class="about-text">
+                            <h3 id="aboutHeading">بازار افغانستان</h3>
+                            <p id="aboutDesc">بازار افغان یک مارکت‌پلیس سبک و سریع برای خرید و فروش کالا در افغانستان است. این پلتفرم برای ارائه تجربه‌ای آسان و امن در خرید و فروش محصولات مختلف طراحی شده است.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card fade-in-up">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 id="secureTitle">امن و قابل اعتماد</h4>
+                            <p id="secureDesc">تمامی معاملات با بالاترین استانداردهای امنیتی انجام می‌شود</p>
+                        </div>
+                        
+                        <div class="feature-card fade-in-up">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4 id="fastTitle">سریع و کارآمد</h4>
+                            <p id="fastDesc">واسط کاربری سریع و بهینه برای تجربه‌ای روان</p>
+                        </div>
+                        
+                        <div class="feature-card fade-in-up">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 id="communityTitle">جامعه بزرگ</h4>
+                            <p id="communityDesc">هزاران کاربر فعال در سراسر افغانستان</p>
+                        </div>
+                        
+                        <div class="feature-card fade-in-up">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4 id="supportTitle">پشتیبانی 24/7</h4>
+                            <p id="supportDesc">تیم پشتیبانی ما همیشه در خدمت شماست</p>
+                        </div>
+                    </div>
+                    
+                    <div class="developer-info">
+                        <div class="developer-card fade-in-up">
+                            <div class="developer-avatar">
+                                <img src="../assets/images/developer.jpg" alt="Merwis Rahimi" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                            </div>
+                            <div class="developer-details">
+                                <h4 id="developerTitle">توسعه‌دهنده</h4>
+                                <p id="developerName"><strong>مرویس رحیمی (Merwis Rahimi)</strong></p>
+                                <p id="developerDesc">متخصص توسعه وب با تجربه در طراحی پلتفرم‌های تجارت الکترونیک</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card fade-in-up">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label" id="productsLabel">محصولات</div>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label" id="usersLabel">کاربران فعال</div>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <div class="stat-number">34</div>
+                    <div class="stat-label" id="provincesLabel">ولایات</div>
+                </div>
+                <div class="stat-card fade-in-up">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label" id="satisfactionLabel">رضایت کاربران</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>بازار افغانستان</h4>
+                    <p>بزرگترین پلتفرم خرید و فروش آنلاین در افغانستان</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>لینک‌های مفید</h5>
+                    <ul>
+                        <li><a href="#">قوانین و مقررات</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">پشتیبانی</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>تماس با ما</h5>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +93 700 123 456</li>
+                        <li><i class="fas fa-envelope"></i> info@bazarafghanistan.af</li>
+                        <li><i class="fas fa-map-marker-alt"></i> کابل، افغانستان</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 بازار افغانستان. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Page-specific translations
+        const PAGE_TRANSLATIONS = {
+            fa: {
+                aboutTitle: 'درباره بازار افغان',
+                aboutHeading: 'بازار افغانستان',
+                aboutDesc: 'بازار افغان یک مارکت‌پلیس سبک و سریع برای خرید و فروش کالا در افغانستان است. این پلتفرم برای ارائه تجربه‌ای آسان و امن در خرید و فروش محصولات مختلف طراحی شده است.',
+                secureTitle: 'امن و قابل اعتماد',
+                secureDesc: 'تمامی معاملات با بالاترین استانداردهای امنیتی انجام می‌شود',
+                fastTitle: 'سریع و کارآمد',
+                fastDesc: 'واسط کاربری سریع و بهینه برای تجربه‌ای روان',
+                communityTitle: 'جامعه بزرگ',
+                communityDesc: 'هزاران کاربر فعال در سراسر افغانستان',
+                supportTitle: 'پشتیبانی 24/7',
+                supportDesc: 'تیم پشتیبانی ما همیشه در خدمت شماست',
+                developerTitle: 'توسعه‌دهنده',
+                developerName: 'مرویس رحیمی (Merwis Rahimi)',
+                developerDesc: 'متخصص توسعه وب با تجربه در طراحی پلتفرم‌های تجارت الکترونیک',
+                productsLabel: 'محصولات',
+                usersLabel: 'کاربران فعال',
+                provincesLabel: 'ولایات',
+                satisfactionLabel: 'رضایت کاربران'
+            },
+            ps: {
+                aboutTitle: 'زموږ د افغان بازار په اړه',
+                aboutHeading: 'د افغانستان بازار',
+                aboutDesc: 'افغان بازار د افغانستان کې د توکو پیرود او پلور لپاره یو سپک او ګړندی مارکیټ پلیس دی. دا پلیټفارم د مختلفو محصولاتو د اسانه او خوندي پیرود او پلور تجربه وړاندې کولو لپاره ډیزاین شوی.',
+                secureTitle: 'خوندي او د باور وړ',
+                secureDesc: 'ټولې معاملې د امنیت د لوړو معیارونو سره ترسره کیږي',
+                fastTitle: 'ګړندی او اغیزمن',
+                fastDesc: 'د ساده تجربې لپاره ګړندی او غوره کاروونکي واسطه',
+                communityTitle: 'لویه ټولنه',
+                communityDesc: 'په ټول افغانستان کې زرګونه فعال کاروونکي',
+                supportTitle: 'د ۲۴/۷ ملاتړ',
+                supportDesc: 'زموږ د ملاتړ ټیم تل ستاسو د خدماتو لپاره چمتو دی',
+                developerTitle: 'جوړوونکی',
+                developerName: 'مرویس رحیمی (Merwis Rahimi)',
+                developerDesc: 'د ویب پراختیا متخصص چې د بریښنایي سوداګرۍ پلیټفارمونو ډیزاین کې تجربه لري',
+                productsLabel: 'محصولات',
+                usersLabel: 'فعال کاروونکي',
+                provincesLabel: 'ولایتونه',
+                satisfactionLabel: 'د کاروونکو خوښي'
+            },
+            en: {
+                aboutTitle: 'About Afghan Bazaar',
+                aboutHeading: 'Afghanistan Bazaar',
+                aboutDesc: 'Afghan Bazaar is a lightweight and fast marketplace for buying and selling goods in Afghanistan. This platform is designed to provide an easy and secure experience for buying and selling various products.',
+                secureTitle: 'Safe & Reliable',
+                secureDesc: 'All transactions are conducted with the highest security standards',
+                fastTitle: 'Fast & Efficient',
+                fastDesc: 'Fast and optimized user interface for a smooth experience',
+                communityTitle: 'Large Community',
+                communityDesc: 'Thousands of active users across Afghanistan',
+                supportTitle: '24/7 Support',
+                supportDesc: 'Our support team is always at your service',
+                developerTitle: 'Developer',
+                developerName: 'Merwis Rahimi',
+                developerDesc: 'Web development specialist with experience in e-commerce platform design',
+                productsLabel: 'Products',
+                usersLabel: 'Active Users',
+                provincesLabel: 'Provinces',
+                satisfactionLabel: 'User Satisfaction'
+            }
+        };
+
+        // Update page content when language changes
+        function updatePageContent() {
+            const currentLang = APP_STATE?.currentLanguage || 'fa';
+            const t = PAGE_TRANSLATIONS[currentLang] || PAGE_TRANSLATIONS.fa;
+            
+            Object.entries(t).forEach(([key, value]) => {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.textContent = value;
+                }
+            });
+        }
+
+        // Theme Manager
+        const themeManager = {
+            init() {
+                const savedTheme = localStorage.getItem('theme') || 'dark';
+                this.applyTheme(savedTheme);
+                
+                const themeToggle = document.getElementById('themeToggle');
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', () => this.toggleTheme());
+                }
+            },
+            
+            toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                this.applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            },
+            
+            applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                const themeIcon = document.getElementById('themeIcon');
+                if (themeIcon) {
+                    themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+                }
+            }
+        };
+
+        // Initialize page translations when app is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize theme
+            themeManager.init();
+            
+            // Wait for app to initialize
+            setTimeout(updatePageContent, 100);
+            
+            // Listen for language changes
+            const langToggle = document.getElementById('langToggle');
+            if (langToggle) {
+                langToggle.addEventListener('click', () => {
+                    setTimeout(updatePageContent, 50);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

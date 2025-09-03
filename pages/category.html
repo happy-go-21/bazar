@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دسته‌بندی محصولات - بازار افغانستان</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .category-hero {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+            border-bottom: 1px solid var(--bg-tertiary);
+        }
+        
+        .category-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .category-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .category-stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: var(--bg-tertiary);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--accent-primary);
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        
+        .category-filters {
+            background: var(--bg-secondary);
+            padding: var(--spacing-lg) 0;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .filter-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .filter-group {
+            background: var(--bg-tertiary);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-group:hover {
+            border-color: var(--accent-primary);
+        }
+        
+        .filter-label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        .filter-input,
+        .filter-select {
+            width: 100%;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            background: var(--bg-primary);
+            border: 2px solid transparent;
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-input:focus,
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-neon);
+        }
+        
+        .filter-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+        
+        .results-count {
+            color: var(--text-secondary);
+        }
+        
+        .view-toggle {
+            display: flex;
+            gap: var(--spacing-xs);
+        }
+        
+        .view-btn {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            background: transparent;
+            border: 2px solid var(--accent-primary);
+            color: var(--accent-primary);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .view-btn.active,
+        .view-btn:hover {
+            background: var(--accent-primary);
+            color: var(--text-primary);
+        }
+        
+        .products-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+        
+        .product-card-list {
+            display: grid;
+            grid-template-columns: 200px 1fr auto;
+            gap: var(--spacing-md);
+            background: var(--bg-secondary);
+            border: 2px solid transparent;
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .product-card-list:hover {
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+        
+        .product-image-list {
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-sm);
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--text-muted);
+        }
+        
+        .product-info-list h4 {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .product-price-list {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--neon-green);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .product-meta-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .pagination-btn {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            background: transparent;
+            border: 2px solid var(--accent-primary);
+            color: var(--accent-primary);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 40px;
+        }
+        
+        .pagination-btn:hover,
+        .pagination-btn.active {
+            background: var(--accent-primary);
+            color: var(--text-primary);
+        }
+        
+        .pagination-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .breadcrumb {
+            padding: var(--spacing-md) 0;
+            background: var(--bg-secondary);
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-xs);
+            align-items: center;
+        }
+        
+        .breadcrumb-list li::after {
+            content: '/';
+            margin: 0 var(--spacing-xs);
+            color: var(--text-muted);
+        }
+        
+        .breadcrumb-list li:last-child::after {
+            display: none;
+        }
+        
+        .breadcrumb-list a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb-list a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .category-stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .results-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .product-card-list {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .product-meta-list {
+                align-items: center;
+            }
+            
+            .pagination {
+                flex-wrap: wrap;
+            }
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            color: var(--text-muted);
+        }
+        
+        .no-results i {
+            font-size: 4rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--accent-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="../index.html" style="color: inherit; text-decoration: none;"><i class="fas fa-store"></i> بازار افغانستان</a></h1>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">خانه</a></li>
+                        <li><a href="#" class="nav-link active">دسته‌بندی‌ها</a></li>
+                        <li><a href="#" class="nav-link">درباره ما</a></li>
+                        <li><a href="#" class="nav-link">تماس</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="lang-toggle">
+                    <button class="btn-neon" id="langToggle">
+                        <span class="lang-text">پښتو</span>
+                    </button>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="../index.html">خانه</a></li>
+                <li><a href="#">دسته‌بندی‌ها</a></li>
+                <li><span id="categoryBreadcrumb">الکترونیک</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Category Hero -->
+    <section class="category-hero">
+        <div class="container">
+            <h1 class="category-title" id="categoryTitle">الکترونیک</h1>
+            <p class="category-description" id="categoryDescription">
+                تمامی محصولات الکترونیکی و دیجیتال
+            </p>
+            <div class="category-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalProducts">0</span>
+                    <span class="stat-label">محصول</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="avgPrice">0</span>
+                    <span class="stat-label">میانگین قیمت</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="newProducts">0</span>
+                    <span class="stat-label">محصول جدید</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="category-filters">
+        <div class="container">
+            <div class="filter-section">
+                <div class="filter-group">
+                    <label class="filter-label">جستجو در محصولات</label>
+                    <input type="text" id="searchInput" class="filter-input" placeholder="نام محصول...">
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">ولایت</label>
+                    <select id="provinceFilter" class="filter-select">
+                        <option value="">همه ولایات</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">حداقل قیمت</label>
+                    <input type="number" id="minPrice" class="filter-input" placeholder="0">
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">حداکثر قیمت</label>
+                    <input type="number" id="maxPrice" class="filter-input" placeholder="بدون محدودیت">
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">مرتب‌سازی</label>
+                    <select id="sortBy" class="filter-select">
+                        <option value="newest">جدیدترین</option>
+                        <option value="price-low">قیمت: کم به زیاد</option>
+                        <option value="price-high">قیمت: زیاد به کم</option>
+                        <option value="popular">محبوب‌ترین</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">وضعیت</label>
+                    <select id="statusFilter" class="filter-select">
+                        <option value="">همه</option>
+                        <option value="new">جدید</option>
+                        <option value="featured">ویژه</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="filter-actions">
+                <button class="btn-neon" id="applyFilters">
+                    <i class="fas fa-filter"></i>
+                    اعمال فیلتر
+                </button>
+                <button class="btn-neon" id="clearFilters">
+                    <i class="fas fa-times"></i>
+                    پاک کردن فیلتر
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <main class="container">
+        <div class="results-header">
+            <div class="results-count" id="resultsCount">در حال بارگذاری...</div>
+            <div class="view-toggle">
+                <button class="view-btn active" id="gridViewBtn">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn" id="listViewBtn">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>در حال بارگذاری محصولات...</p>
+        </div>
+
+        <!-- Products Grid View -->
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded here -->
+        </div>
+
+        <!-- Products List View -->
+        <div class="products-list" id="productsList" style="display: none;">
+            <!-- Products will be loaded here -->
+        </div>
+
+        <!-- No Results -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>محصولی یافت نشد</h3>
+            <p>لطفاً فیلترهای خود را تغییر دهید و دوباره تلاش کنید</p>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination" style="display: none;">
+            <!-- Pagination will be loaded here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>بازار افغانستان</h4>
+                    <p>بزرگترین پلتفرم خرید و فروش آنلاین در افغانستان</p>
+                </div>
+                <div class="footer-section">
+                    <h5>لینک‌های مفید</h5>
+                    <ul>
+                        <li><a href="#">قوانین و مقررات</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">پشتیبانی</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 بازار افغانستان. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Application state for category page
+        const categoryState = {
+            categoryId: '',
+            currentLanguage: 'fa',
+            products: [],
+            filteredProducts: [],
+            categories: [],
+            provinces: [],
+            currentPage: 1,
+            itemsPerPage: 20,
+            viewMode: 'grid', // 'grid' or 'list'
+            filters: {
+                search: '',
+                province: '',
+                minPrice: '',
+                maxPrice: '',
+                sort: 'newest',
+                status: ''
+            }
+        };
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            categoryState.categoryId = urlParams.get('category') || 'electronics';
+            
+            await loadData();
+            setupEventListeners();
+            loadCategory();
+            loadProducts();
+        });
+
+        // Load data from JSON files
+        async function loadData() {
+            try {
+                const [productsResponse, categoriesResponse, provincesResponse] = await Promise.all([
+                    fetch('../data/products.json'),
+                    fetch('../data/categories.json'),
+                    fetch('../data/provinces.json')
+                ]);
+
+                categoryState.products = await productsResponse.json();
+                categoryState.categories = await categoriesResponse.json();
+                categoryState.provinces = await provincesResponse.json();
+
+                // Populate province filter
+                const provinceFilter = document.getElementById('provinceFilter');
+                categoryState.provinces.forEach(province => {
+                    const option = document.createElement('option');
+                    option.value = province.id;
+                    option.textContent = province.name[categoryState.currentLanguage];
+                    provinceFilter.appendChild(option);
+                });
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Language toggle
+            document.getElementById('langToggle').addEventListener('click', toggleLanguage);
+            
+            // View toggle
+            document.getElementById('gridViewBtn').addEventListener('click', () => setViewMode('grid'));
+            document.getElementById('listViewBtn').addEventListener('click', () => setViewMode('list'));
+            
+            // Filter controls
+            document.getElementById('searchInput').addEventListener('input', debounce(applyFilters, 300));
+            document.getElementById('provinceFilter').addEventListener('change', applyFilters);
+            document.getElementById('minPrice').addEventListener('input', debounce(applyFilters, 300));
+            document.getElementById('maxPrice').addEventListener('input', debounce(applyFilters, 300));
+            document.getElementById('sortBy').addEventListener('change', applyFilters);
+            document.getElementById('statusFilter').addEventListener('change', applyFilters);
+            
+            // Filter buttons
+            document.getElementById('applyFilters').addEventListener('click', applyFilters);
+            document.getElementById('clearFilters').addEventListener('click', clearFilters);
+            
+            // Mobile menu
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const nav = document.querySelector('.nav');
+            if (mobileMenuToggle && nav) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                });
+            }
+        }
+
+        // Load category information
+        function loadCategory() {
+            const category = categoryState.categories.find(cat => cat.id === categoryState.categoryId);
+            if (category) {
+                document.getElementById('categoryTitle').textContent = category.name[categoryState.currentLanguage];
+                document.getElementById('categoryBreadcrumb').textContent = category.name[categoryState.currentLanguage];
+                document.title = `${category.name[categoryState.currentLanguage]} - بازار افغانستان`;
+                
+                // Update stats
+                updateCategoryStats();
+            }
+        }
+
+        // Update category statistics
+        function updateCategoryStats() {
+            const categoryProducts = categoryState.products.filter(p => p.categoryId === categoryState.categoryId);
+            const newProducts = categoryProducts.filter(p => p.isNew);
+            const avgPrice = categoryProducts.length > 0 ? 
+                Math.round(categoryProducts.reduce((sum, p) => sum + p.price, 0) / categoryProducts.length) : 0;
+
+            document.getElementById('totalProducts').textContent = categoryProducts.length.toLocaleString();
+            document.getElementById('avgPrice').textContent = `${avgPrice.toLocaleString()} افغانی`;
+            document.getElementById('newProducts').textContent = newProducts.length.toLocaleString();
+        }
+
+        // Load and filter products
+        function loadProducts() {
+            showLoading(true);
+            
+            setTimeout(() => {
+                applyFilters();
+                showLoading(false);
+            }, 500);
+        }
+
+        // Apply filters
+        function applyFilters() {
+            // Get filter values
+            categoryState.filters.search = document.getElementById('searchInput').value.toLowerCase();
+            categoryState.filters.province = document.getElementById('provinceFilter').value;
+            categoryState.filters.minPrice = document.getElementById('minPrice').value;
+            categoryState.filters.maxPrice = document.getElementById('maxPrice').value;
+            categoryState.filters.sort = document.getElementById('sortBy').value;
+            categoryState.filters.status = document.getElementById('statusFilter').value;
+
+            // Filter products
+            let filtered = categoryState.products.filter(product => {
+                return product.categoryId === categoryState.categoryId;
+            });
+
+            // Apply search filter
+            if (categoryState.filters.search) {
+                filtered = filtered.filter(product =>
+                    product.title[categoryState.currentLanguage].toLowerCase().includes(categoryState.filters.search) ||
+                    product.description[categoryState.currentLanguage].toLowerCase().includes(categoryState.filters.search)
+                );
+            }
+
+            // Apply province filter
+            if (categoryState.filters.province) {
+                filtered = filtered.filter(product => product.location.provinceId === categoryState.filters.province);
+            }
+
+            // Apply price filters
+            if (categoryState.filters.minPrice) {
+                filtered = filtered.filter(product => product.price >= parseInt(categoryState.filters.minPrice));
+            }
+            if (categoryState.filters.maxPrice) {
+                filtered = filtered.filter(product => product.price <= parseInt(categoryState.filters.maxPrice));
+            }
+
+            // Apply status filter
+            if (categoryState.filters.status === 'new') {
+                filtered = filtered.filter(product => product.isNew);
+            } else if (categoryState.filters.status === 'featured') {
+                filtered = filtered.filter(product => product.isFeatured);
+            }
+
+            // Sort products
+            sortProducts(filtered);
+
+            categoryState.filteredProducts = filtered;
+            categoryState.currentPage = 1;
+            renderProducts();
+            updateResultsCount();
+            renderPagination();
+        }
+
+        // Sort products
+        function sortProducts(products) {
+            switch (categoryState.filters.sort) {
+                case 'price-low':
+                    products.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-high':
+                    products.sort((a, b) => b.price - a.price);
+                    break;
+                case 'popular':
+                    products.sort((a, b) => (b.views || 0) - (a.views || 0));
+                    break;
+                case 'newest':
+                default:
+                    products.sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+                    break;
+            }
+        }
+
+        // Render products
+        function renderProducts() {
+            const startIndex = (categoryState.currentPage - 1) * categoryState.itemsPerPage;
+            const endIndex = startIndex + categoryState.itemsPerPage;
+            const pageProducts = categoryState.filteredProducts.slice(startIndex, endIndex);
+
+            if (categoryState.viewMode === 'grid') {
+                renderGridView(pageProducts);
+            } else {
+                renderListView(pageProducts);
+            }
+
+            // Show/hide no results
+            const noResults = document.getElementById('noResults');
+            if (categoryState.filteredProducts.length === 0) {
+                noResults.style.display = 'block';
+                document.getElementById('productsGrid').style.display = 'none';
+                document.getElementById('productsList').style.display = 'none';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+
+        // Render grid view
+        function renderGridView(products) {
+            const productsGrid = document.getElementById('productsGrid');
+            const productsList = document.getElementById('productsList');
+            
+            productsGrid.style.display = 'grid';
+            productsList.style.display = 'none';
+
+            productsGrid.innerHTML = products.map(product => `
+                <div class="product-card" onclick="goToProduct(${product.id})">
+                    <div class="product-image">
+                        <i class="${product.icon || 'fas fa-box'}"></i>
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">${product.title[categoryState.currentLanguage]}</h4>
+                        <p class="product-description">${product.description[categoryState.currentLanguage]}</p>
+                        <div class="product-badges">
+                            ${product.isNew ? '<span class="badge badge-new">جدید</span>' : ''}
+                            ${product.isFeatured ? '<span class="badge badge-featured">ویژه</span>' : ''}
+                        </div>
+                        <div class="product-meta">
+                            <span class="product-price">${formatPrice(product.price)} افغانی</span>
+                            <span class="product-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                ${product.location.province[categoryState.currentLanguage]}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render list view
+        function renderListView(products) {
+            const productsGrid = document.getElementById('productsGrid');
+            const productsList = document.getElementById('productsList');
+            
+            productsGrid.style.display = 'none';
+            productsList.style.display = 'flex';
+
+            productsList.innerHTML = products.map(product => `
+                <div class="product-card-list" onclick="goToProduct(${product.id})">
+                    <div class="product-image-list">
+                        <i class="${product.icon || 'fas fa-box'}"></i>
+                    </div>
+                    <div class="product-info-list">
+                        <h4>${product.title[categoryState.currentLanguage]}</h4>
+                        <p>${product.description[categoryState.currentLanguage]}</p>
+                        <div class="product-badges">
+                            ${product.isNew ? '<span class="badge badge-new">جدید</span>' : ''}
+                            ${product.isFeatured ? '<span class="badge badge-featured">ویژه</span>' : ''}
+                        </div>
+                    </div>
+                    <div class="product-meta-list">
+                        <div class="product-price-list">${formatPrice(product.price)} افغانی</div>
+                        <div class="product-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            ${product.location.province[categoryState.currentLanguage]}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render pagination
+        function renderPagination() {
+            const pagination = document.getElementById('pagination');
+            const totalPages = Math.ceil(categoryState.filteredProducts.length / categoryState.itemsPerPage);
+
+            if (totalPages <= 1) {
+                pagination.style.display = 'none';
+                return;
+            }
+
+            pagination.style.display = 'flex';
+
+            let paginationHTML = '';
+
+            // Previous button
+            paginationHTML += `
+                <button class="pagination-btn" ${categoryState.currentPage === 1 ? 'disabled' : ''} 
+                        onclick="changePage(${categoryState.currentPage - 1})">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            `;
+
+            // Page numbers
+            const startPage = Math.max(1, categoryState.currentPage - 2);
+            const endPage = Math.min(totalPages, categoryState.currentPage + 2);
+
+            for (let i = startPage; i <= endPage; i++) {
+                paginationHTML += `
+                    <button class="pagination-btn ${i === categoryState.currentPage ? 'active' : ''}" 
+                            onclick="changePage(${i})">
+                        ${i}
+                    </button>
+                `;
+            }
+
+            // Next button
+            paginationHTML += `
+                <button class="pagination-btn" ${categoryState.currentPage === totalPages ? 'disabled' : ''} 
+                        onclick="changePage(${categoryState.currentPage + 1})">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            `;
+
+            pagination.innerHTML = paginationHTML;
+        }
+
+        // Change page
+        function changePage(page) {
+            const totalPages = Math.ceil(categoryState.filteredProducts.length / categoryState.itemsPerPage);
+            if (page < 1 || page > totalPages) return;
+
+            categoryState.currentPage = page;
+            renderProducts();
+            renderPagination();
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Set view mode
+        function setViewMode(mode) {
+            categoryState.viewMode = mode;
+            
+            const gridBtn = document.getElementById('gridViewBtn');
+            const listBtn = document.getElementById('listViewBtn');
+            
+            if (mode === 'grid') {
+                gridBtn.classList.add('active');
+                listBtn.classList.remove('active');
+            } else {
+                listBtn.classList.add('active');
+                gridBtn.classList.remove('active');
+            }
+            
+            renderProducts();
+        }
+
+        // Clear filters
+        function clearFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('provinceFilter').value = '';
+            document.getElementById('minPrice').value = '';
+            document.getElementById('maxPrice').value = '';
+            document.getElementById('sortBy').value = 'newest';
+            document.getElementById('statusFilter').value = '';
+            
+            applyFilters();
+        }
+
+        // Update results count
+        function updateResultsCount() {
+            const count = categoryState.filteredProducts.length;
+            const resultsCount = document.getElementById('resultsCount');
+            resultsCount.textContent = `${count.toLocaleString()} محصول یافت شد`;
+        }
+
+        // Show/hide loading
+        function showLoading(show) {
+            const loading = document.getElementById('loading');
+            loading.style.display = show ? 'block' : 'none';
+        }
+
+        // Toggle language
+        function toggleLanguage() {
+            categoryState.currentLanguage = categoryState.currentLanguage === 'fa' ? 'ps' : 'fa';
+            
+            // Update language toggle button
+            const langToggle = document.getElementById('langToggle');
+            langToggle.querySelector('.lang-text').textContent = 
+                categoryState.currentLanguage === 'fa' ? 'پښتو' : 'فارسی';
+            
+            // Reload category and products with new language
+            loadCategory();
+            renderProducts();
+        }
+
+        // Utility functions
+        function formatPrice(price) {
+            return price.toLocaleString();
+        }
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        function goToProduct(productId) {
+            window.location.href = `product-detail.html?id=${productId}`;
+        }
+    </script>
+</body>
+</html>

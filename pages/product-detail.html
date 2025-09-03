@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزئیات محصول - بازار افغانستان</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .product-detail-image {
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-lg);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: var(--text-muted);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-detail-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+            opacity: 0.1;
+        }
+        
+        .product-detail-info h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+        
+        .product-detail-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+        }
+        
+        .product-detail-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--neon-green);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .product-detail-location {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-muted);
+        }
+        
+        .product-detail-contact {
+            background: var(--bg-tertiary);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .product-detail-contact h4 {
+            color: var(--accent-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .product-detail-contact p {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .product-detail-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb {
+            padding: var(--spacing-md) 0;
+            background: var(--bg-secondary);
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-xs);
+            align-items: center;
+        }
+        
+        .breadcrumb-list li::after {
+            content: '/';
+            margin: 0 var(--spacing-xs);
+            color: var(--text-muted);
+        }
+        
+        .breadcrumb-list li:last-child::after {
+            display: none;
+        }
+        
+        .breadcrumb-list a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .related-products {
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid var(--bg-tertiary);
+        }
+        
+        @media (max-width: 768px) {
+            .product-detail {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+            
+            .product-detail-image {
+                height: 300px;
+                font-size: 4rem;
+            }
+            
+            .product-detail-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="../index.html" style="color: inherit; text-decoration: none;"><i class="fas fa-store"></i> بازار افغانستان</a></h1>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">خانه</a></li>
+                        <li><a href="#" class="nav-link">دسته‌بندی‌ها</a></li>
+                        <li><a href="#" class="nav-link">درباره ما</a></li>
+                        <li><a href="#" class="nav-link">تماس</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="../index.html">خانه</a></li>
+                <li><a href="#" id="categoryBreadcrumb">الکترونیک</a></li>
+                <li><span id="productBreadcrumb">محصول</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="product-detail" id="productDetail">
+            <!-- Product details will be loaded here -->
+        </div>
+
+        <!-- Related Products -->
+        <section class="related-products">
+            <h3 class="section-title">محصولات مشابه</h3>
+            <div class="products-grid" id="relatedProducts">
+                <!-- Related products will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>بازار افغانستان</h4>
+                    <p>بزرگترین پلتفرم خرید و فروش آنلاین در افغانستان</p>
+                </div>
+                <div class="footer-section">
+                    <h5>لینک‌های مفید</h5>
+                    <ul>
+                        <li><a href="#">قوانین و مقررات</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">پشتیبانی</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 بازار افغانستان. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Load product details on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            
+            if (productId) {
+                loadProductDetail(productId);
+            } else {
+                // Redirect to home if no product ID
+                window.location.href = '../index.html';
+            }
+        });
+
+        async function loadProductDetail(productId) {
+            try {
+                const response = await fetch('../data/products.json');
+                const products = await response.json();
+                const product = products.find(p => p.id == productId);
+                
+                if (product) {
+                    renderProductDetail(product);
+                    loadRelatedProducts(product.categoryId, productId);
+                } else {
+                    showError('محصول یافت نشد');
+                }
+            } catch (error) {
+                console.error('Error loading product:', error);
+                showError('خطا در بارگذاری محصول');
+            }
+        }
+
+        function renderProductDetail(product) {
+            const productDetail = document.getElementById('productDetail');
+            const categoryBreadcrumb = document.getElementById('categoryBreadcrumb');
+            const productBreadcrumb = document.getElementById('productBreadcrumb');
+            
+            // Update breadcrumb
+            if (categoryBreadcrumb) categoryBreadcrumb.textContent = 'دسته‌بندی';
+            if (productBreadcrumb) productBreadcrumb.textContent = product.title.fa;
+            
+            // Update page title
+            document.title = `${product.title.fa} - بازار افغانستان`;
+            
+            productDetail.innerHTML = `
+                <div class="product-detail-image">
+                    <i class="${product.icon || 'fas fa-box'}"></i>
+                </div>
+                <div class="product-detail-info">
+                    <h2>${product.title.fa}</h2>
+                    <p class="product-detail-description">${product.description.fa}</p>
+                    <div class="product-detail-price">${formatPrice(product.price)} افغانی</div>
+                    <div class="product-detail-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        ${product.location.province.fa}, ${product.location.city.fa}
+                    </div>
+                    <div class="product-detail-contact">
+                        <h4><i class="fas fa-user"></i> اطلاعات فروشنده</h4>
+                        <p><i class="fas fa-user"></i> ${product.seller.name}</p>
+                        <p><i class="fas fa-phone"></i> ${product.seller.phone}</p>
+                    </div>
+                    <div class="product-detail-actions">
+                        <button class="btn-neon" onclick="contactSeller('${product.seller.phone}')">
+                            <i class="fas fa-phone"></i>
+                            تماس با فروشنده
+                        </button>
+                        <button class="btn-neon" onclick="saveProduct(${product.id})">
+                            <i class="fas fa-heart"></i>
+                            ذخیره
+                        </button>
+                        <button class="btn-neon" onclick="shareProduct(${product.id})">
+                            <i class="fas fa-share"></i>
+                            اشتراک‌گذاری
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function loadRelatedProducts(categoryId, currentProductId) {
+            try {
+                const response = await fetch('../data/products.json');
+                const products = await response.json();
+                const relatedProducts = products
+                    .filter(p => p.categoryId === categoryId && p.id != currentProductId)
+                    .slice(0, 4);
+                
+                renderRelatedProducts(relatedProducts);
+            } catch (error) {
+                console.error('Error loading related products:', error);
+            }
+        }
+
+        function renderRelatedProducts(products) {
+            const relatedProductsGrid = document.getElementById('relatedProducts');
+            
+            relatedProductsGrid.innerHTML = products.map(product => `
+                <div class="product-card" onclick="goToProduct(${product.id})">
+                    <div class="product-image">
+                        <i class="${product.icon || 'fas fa-box'}"></i>
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">${product.title.fa}</h4>
+                        <p class="product-description">${product.description.fa}</p>
+                        <div class="product-meta">
+                            <span class="product-price">${formatPrice(product.price)} افغانی</span>
+                            <span class="product-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                ${product.location.province.fa}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function formatPrice(price) {
+            return price.toLocaleString();
+        }
+
+        function contactSeller(phone) {
+            window.open(`tel:${phone}`, '_self');
+        }
+
+        function saveProduct(productId) {
+            // Save to localStorage
+            const saved = JSON.parse(localStorage.getItem('savedProducts') || '[]');
+            if (!saved.includes(productId)) {
+                saved.push(productId);
+                localStorage.setItem('savedProducts', JSON.stringify(saved));
+                alert('محصول در لیست ذخیره شده‌ها اضافه شد');
+            } else {
+                alert('این محصول قبلاً ذخیره شده است');
+            }
+        }
+
+        function shareProduct(productId) {
+            const url = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    url: url
+                });
+            } else {
+                // Fallback: copy to clipboard
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('لینک کپی شد');
+                });
+            }
+        }
+
+        function goToProduct(productId) {
+            window.location.href = `product-detail.html?id=${productId}`;
+        }
+
+        function showError(message) {
+            const productDetail = document.getElementById('productDetail');
+            productDetail.innerHTML = `
+                <div class="error-message" style="text-align: center; padding: var(--spacing-xl); grid-column: 1 / -1;">
+                    <i class="fas fa-exclamation-triangle fa-3x" style="color: var(--neon-orange); margin-bottom: var(--spacing-md);"></i>
+                    <h3>${message}</h3>
+                    <a href="../index.html" class="btn-neon" style="margin-top: var(--spacing-md);">
+                        بازگشت به صفحه اصلی
+                    </a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

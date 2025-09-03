@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما - بازار افغانستان</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1><i class="fas fa-store"></i> بازار افغانستان</h1>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">خانه</a></li>
+                        <li><a href="categories.html" class="nav-link">دسته‌بندی‌ها</a></li>
+                        <li><a href="about.html" class="nav-link">درباره ما</a></li>
+                        <li><a href="contact.html" class="nav-link active">تماس</a></li>
+                        <li><a href="../login.html" class="nav-link">ورود</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Language Toggle -->
+                <div class="lang-toggle">
+                    <button class="btn-neon" id="langToggle">
+                        <span class="lang-text">EN</span>
+                    </button>
+                </div>
+                
+                <!-- Theme Toggle -->
+                <div class="theme-toggle">
+                    <button class="theme-btn" id="themeToggle">
+                        <i class="fas fa-sun" id="themeIcon"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-content fade-in-up">
+                <h2 class="section-title" id="contactTitle">تماس با ما</h2>
+                <p class="section-subtitle" id="contactSubtitle">سوالی دارید؟ با ما در تماس باشید</p>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName" id="nameLabel">نام</label>
+                                <input type="text" id="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail" id="emailLabel">ایمیل</label>
+                                <input type="email" id="contactEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject" id="subjectLabel">موضوع</label>
+                            <input type="text" id="contactSubject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage" id="messageLabel">پیام</label>
+                            <textarea id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-neon submit-btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            ارسال پیام
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-grid">
+                    <div class="contact-info-card fade-in-up">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4 id="phoneTitle">تلفن</h4>
+                        <p>+93 748002981</p>
+                    </div>
+                    
+                    <div class="contact-info-card fade-in-up">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4 id="emailTitle">ایمیل</h4>
+                        <p>merwis@bazarafghanistan.af</p>
+                    </div>
+                    
+                    <div class="contact-info-card fade-in-up">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 id="addressTitle">آدرس</h4>
+                        <p id="fullAddress">کابل، افغانستان</p>
+                    </div>
+                    
+                    <div class="contact-info-card fade-in-up">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 id="hoursTitle">توسعه‌دهنده</h4>
+                        <p id="workingHours">مرویس رحیمی - فول استک وب دیزاینر</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>بازار افغانستان</h4>
+                    <p>بزرگترین پلتفرم خرید و فروش آنلاین در افغانستان</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>لینک‌های مفید</h5>
+                    <ul>
+                        <li><a href="#">قوانین و مقررات</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                        <li><a href="#">راهنمای خرید</a></li>
+                        <li><a href="#">پشتیبانی</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>تماس با ما</h5>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +93 748002981</li>
+                        <li><i class="fas fa-envelope"></i> merwis@bazarafghanistan.af</li>
+                        <li><i class="fas fa-map-marker-alt"></i> کابل، افغانستان</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 بازار افغانستان. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Page-specific translations for contact
+        const CONTACT_TRANSLATIONS = {
+            fa: {
+                contactTitle: 'تماس با ما',
+                contactSubtitle: 'سوالی دارید؟ با ما در تماس باشید',
+                nameLabel: 'نام',
+                emailLabel: 'ایمیل',
+                subjectLabel: 'موضوع',
+                messageLabel: 'پیام',
+                submitBtn: 'ارسال پیام',
+                phoneTitle: 'تلفن',
+                emailTitle: 'ایمیل',
+                addressTitle: 'آدرس',
+                hoursTitle: 'توسعه‌دهنده',
+                fullAddress: 'کابل، افغانستان',
+                workingHours: 'مرویس رحیمی - فول استک وب دیزاینر و دولوپر'
+            },
+            en: {
+                contactTitle: 'Contact Us',
+                contactSubtitle: 'Have a question? Get in touch with us',
+                nameLabel: 'Name',
+                emailLabel: 'Email',
+                subjectLabel: 'Subject',
+                messageLabel: 'Message',
+                submitBtn: 'Send Message',
+                phoneTitle: 'Phone',
+                emailTitle: 'Email',
+                addressTitle: 'Address',
+                hoursTitle: 'Developer',
+                fullAddress: 'Kabul, Afghanistan',
+                workingHours: 'Merwis Rahimi - Full Stack Web Designer & Developer'
+            }
+        };
+
+        // Update contact page content
+        function updateContactContent() {
+            const currentLang = APP_STATE?.currentLanguage || 'fa';
+            const t = CONTACT_TRANSLATIONS[currentLang] || CONTACT_TRANSLATIONS.fa;
+            
+            Object.entries(t).forEach(([key, value]) => {
+                const element = document.getElementById(key);
+                if (element) {
+                    if (element.tagName === 'INPUT' && element.type !== 'submit') {
+                        element.placeholder = value;
+                    } else {
+                        element.textContent = value;
+                    }
+                }
+            });
+        }
+
+        // Theme Manager
+        const themeManager = {
+            init() {
+                const savedTheme = localStorage.getItem('theme') || 'dark';
+                this.applyTheme(savedTheme);
+                
+                const themeToggle = document.getElementById('themeToggle');
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', () => this.toggleTheme());
+                }
+            },
+            
+            toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                this.applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            },
+            
+            applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                const themeIcon = document.getElementById('themeIcon');
+                if (themeIcon) {
+                    themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+                }
+            }
+        };
+
+        // Form submission handling
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize theme
+            themeManager.init();
+            
+            setTimeout(updateContactContent, 100);
+            
+            const langToggle = document.getElementById('langToggle');
+            if (langToggle) {
+                langToggle.addEventListener('click', () => {
+                    setTimeout(updateContactContent, 50);
+                });
+            }
+            
+            // Handle form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const currentLang = APP_STATE?.currentLanguage || 'fa';
+                    const messages = {
+                        fa: 'پیام شما ارسال شد! به زودی با شما تماس خواهیم گرفت.',
+                        en: 'Your message has been sent! We will contact you soon.'
+                    };
+                    alert(messages[currentLang] || messages.fa);
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
